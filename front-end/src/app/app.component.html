@@ -1,0 +1,19 @@
+<p>HOla mundo</p>
+
+{{title}}
+<br>
+la suma de 2+2 es:{{2+2}}
+<p>El doble de un numero es {{DuplicaNumero(3)}}
+</p>
+<h2>Datos de las Películas</h2>
+<div *ngFor="let Pelicula of peliculas ;let index=index" class="pelicula-contenedor">
+    <div>
+        Película {{index+1}}: {{Pelicula.titulo | uppercase}}
+    </div>
+    <div>
+        {{Pelicula.lanzamiento | date:'dd-MMMM-yy'|uppercase}}
+    </div>
+    <div>
+        {{Pelicula.precio | currency}}
+    </div>
+</div>
